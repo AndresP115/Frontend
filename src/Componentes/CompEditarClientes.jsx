@@ -3,7 +3,7 @@ import { useNavigate, useParams } from  "react-router-dom";
 import { useState, useEffect } from "react";
 
 //const URL = "http://localhost:5000/api/clientes/"
-const URL = "https://backend-gcqm.onrender.com/api/clientes"
+const URL = "https://backend-gcqm.onrender.com/api/clientes/"
 
 const CompEditarClientes = () => {
 
@@ -36,7 +36,7 @@ const CompEditarClientes = () => {
     }, []);
 
     const getclientesID = async () => {
-        const resul = await axios.get(`${URL}${id}`)
+        const resul = await axios.get(`${URL}/${id}`)
         setNombres(resul.data.nombres)
         setApellidos(resul.data.apellidos)
         setCedula(resul.data.cedula)

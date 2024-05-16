@@ -3,7 +3,7 @@ import { useNavigate, useParams } from  "react-router-dom";
 import { useState, useEffect } from "react";
 
 //const URL = "http://localhost:5000/api/productos/"
-const URL = "https://backend-gcqm.onrender.com/api/productos"
+const URL = "https://backend-gcqm.onrender.com/api/productos/"
 
 const CompEditarProductos = () => {
 
@@ -33,7 +33,7 @@ const CompEditarProductos = () => {
     }, []);
 
     const getproductosID = async () => {
-        const resul = await axios.get(`${URL}${id}`)
+        const resul = await axios.get(`${URL}/${id}`)
         setNombres(resul.data.nombres)
         setDescripcion(resul.data.descripcion)
         setPrecio(resul.data.precio)

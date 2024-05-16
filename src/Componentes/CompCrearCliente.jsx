@@ -3,7 +3,7 @@ import { useNavigate } from  "react-router-dom";
 import { useState } from "react";
 
 //const URL = "http://localhost:5000/api/clientes/"
-const URL = "https://backend-gcqm.onrender.com/api/clientes"
+const URL = "https://backend-gcqm.onrender.com/api/clientes/"
 
 const CompCrearClientes = () => {
 
