@@ -18,7 +18,7 @@ const CompEditarProductos = () => {
     //Función actualizar
     const editarProductos = async (e) => {
         e.preventDefault();
-        await axios.post(URL, {
+        await axios.patch(`${URL}${id}`, {
             nombres:nombres,
             descripcion:descripcion,
             precio:precio,
